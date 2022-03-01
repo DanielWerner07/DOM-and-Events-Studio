@@ -35,6 +35,18 @@
             <button id = "takeoff">Take off</button>
             <button id = "landing">Land</button>
             <button id = "missionAbort">Abort Mission</button>
+            <script>
+                function takeOffButton () {
+                    let takeOffConfirm = window.confirm("Confirm that the shuttle is ready for takeoff.");
+                    if (takeOffConfirm === true) {
+                        document.getElementById("flightStatus").innerHTML = "Shuttle in flight.";
+                        document.getElementById("shuttleBackground").style.backgroundColor = blue;
+                        document.getElementById("spaceShuttleHeight").innerHTML += 10000;
+                    }
+                }
+                let button = document.getElementById("takeoff");
+                button.addEventListener("click", takeOffButton);
+            </script>
         </div>
     </body>
 </html>
